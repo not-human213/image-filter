@@ -28,8 +28,8 @@ Ensure you have the following installed:
 
 1. Clone this repository:  
    ```bash  
-   git clone https://github.com/username/image-filtering.git  
-   cd image-filtering  
+   git clone https://github.com/not-human213/image-filter.git
+   cd image-filter  
 2. Run the program:
   ```bash
    ./filter <filter_type> infile.bmp outfile.bmp
