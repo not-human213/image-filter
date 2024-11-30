@@ -30,3 +30,14 @@ Ensure you have the following installed:
    ```bash  
    git clone https://github.com/username/image-filtering.git  
    cd image-filtering  
+2. Run the program:
+  ```bash
+   ./filter <filter_type> infile.bmp outfile.bmp
+```
+Replace <filter_type> with one of these
+<ul>
+   <li>-g   for grascale</li>
+   <li>-b   for blur</li>
+   <li>-r   for reflect</li>
+   <li>-e   to identify edges</li>
+</ul>
