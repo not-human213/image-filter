@@ -6,7 +6,6 @@
 
 int main(int argc, char *argv[])
 {
-    // Define allowable filters
     char *filters = "begr";
 
     // Get filter flag and check validity
