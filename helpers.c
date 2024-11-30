@@ -6,7 +6,6 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE temp;
     for (int i = 0; i < height; i++)
     {
-        //gdfgdf
         for (int j = 0; j < width; j++)
         {
             temp = image[i][j];
@@ -21,7 +20,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE temp[height][width]; //fghfdfg
+    RGBTRIPLE temp[height][width];
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -31,7 +30,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     }
     for (int i = 0; i < height; i++)
     {
-        //shyjyf
         for (int j = 0; j < width; j++)
         {
             image[i][j] = temp[i][width - 1 - j];
@@ -43,7 +41,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 }
 
 // Blur image
-void blur(int height, int width, RGBTRIPLE image[height][width]) //fjhgjfjfg
+void blur(int height, int width, RGBTRIPLE image[height][width]) 
 {
     int i, j, k, l;
     int red, green, blue;
@@ -54,7 +52,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width]) //fjhgjfjfg
     {
         for (j = 0; j < width; j++)
         {
-            //dfghhhgn
             temp[i][j] = image[i][j];
         }
     }
@@ -86,7 +83,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width]) //fjhgjfjfg
                     }
                     avg_red = round(red / sr_px);
                     avg_blue = round(blue / sr_px);
-                    avg_green = round(green / sr_px); //sdfxbdgn
+                    avg_green = round(green / sr_px);
                 }
             }
             image[i][j].rgbtRed = avg_red;
@@ -107,7 +104,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE temp[height][width];
     for (i = 0; i < height; i++)
     {
-        for (j = 0; j < width; j++) //fggcgb
+        for (j = 0; j < width; j++) 
         {
             temp[i][j] = image[i][j];
         }
@@ -123,7 +120,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int srg[3][3];
             double tolx[3];
             double toly[3];
-            int tol[3];//dfhghdhfg
+            int tol[3];
             for (int z = 0; z < 3; z++)
             {
                 tolx[z] = 0;
@@ -163,7 +160,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     tolx[0] += (gx[z][y] * srr[z][y]);
                     tolx[2] += (gx[z][y] * srb[z][y]);
                     tolx[1] += (gx[z][y] * srg[z][y]);
-                    toly[0] += (gx[y][z] * srr[z][y]); //dghfcb
+                    toly[0] += (gx[y][z] * srr[z][y]); 
                     toly[2] += (gx[y][z] * srb[z][y]);
                     toly[1] += (gx[y][z] * srg[z][y]);
                 }
@@ -177,7 +174,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
             image[i][j].rgbtRed = tol[0];
-            image[i][j].rgbtBlue = tol[2]; //dfggcngncf
+            image[i][j].rgbtBlue = tol[2];
             image[i][j].rgbtGreen = tol[1];
         }
     }
